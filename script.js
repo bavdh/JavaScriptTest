@@ -17,17 +17,19 @@ function getCellPosition(mousePosX, mousePosY){
 	return [posx, posy];
 }
 
+// return cell value
 function getCellValue(cellRow, cellCol){
 	var index = ((col * cellRow) + cellCol);
 	
 	// console output
-	console.log('Row: ' + cellRow);
-	console.log('Col: ' + cellCol);
+	console.log('CellPosX: ' + cellCol);
+	console.log('CellPosY: ' + cellRow);
 	console.log('Array Index: ' + index);
 	
 	return cellValues[index];
 }
 
+// mouse click event listener for every cell
 function cellClickEvent(event){
 	// console output
 	console.log('Cell Clicked.');
@@ -45,6 +47,7 @@ function cellClickEvent(event){
 	this.style.backgroundColor = '#fff';
 }
 
+// display a row * col grid using divs
 function createGrid(row, col){
 	var grid = document.createElement('div');
 	
@@ -73,6 +76,7 @@ function createGrid(row, col){
 	document.getElementById('container').appendChild(grid);
 }
 
+// display 1d array in console
 function display1dArray(array){
 	var n = array.length;
 	
@@ -82,6 +86,7 @@ function display1dArray(array){
 	}
 }
 
+// shuffle 1d Array
 function shuffle1dArray(array){
 	var n = array.length;
 	
@@ -94,6 +99,7 @@ function shuffle1dArray(array){
 	}
 }
 
+// generate random values for the cell
 function generateRandomCellValues(){
 	var n = row * col;
 	var value = 1;
@@ -116,7 +122,7 @@ function generateRandomCellValues(){
 	display1dArray(cellValues);
 }
 
-
+// display cell values
 function displayCellValuesInGrid(){
 	var cells = document.getElementsByClassName('cell');
 	var len = cells.length;
@@ -129,6 +135,7 @@ function displayCellValuesInGrid(){
 	}
 }
 
+// Window onload event listener
 window.onload = function(){
 	// console output
 	console.log('Window Loaded');
