@@ -1,0 +1,17 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+#grid{
+  border: 1px solid #000;
+}
+.cell{
+  float: left;
+  margin: .5px;
+  background-color: #ddd;
+}
+
+.cell:hover{
+  background-color: #ccc;
+}
